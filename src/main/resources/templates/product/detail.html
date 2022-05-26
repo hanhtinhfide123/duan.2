@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{layout/index :: dynamic(~{::main})}">
+
+
+<body>
+	<main th:object="${item}">
+		<div class="content-product-box">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 text-center">
+
+					<img th:src="@{|/assets/images/*{image}|}">
+
+
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 ">
+					<br> <br> <br> <br>
+					<ul>
+						<li>Tên:&nbsp; <a th:text="*{name}"></a></li>
+						<li>Giá:&nbsp; <a th:text="*{price}"></a></li>
+						<li>Ngày:&nbsp; <a th:text="*{createDate}"></a></li>
+						<li>Loại:&nbsp; <a th:text="*{category.name}"></a></li>
+						
+					</ul>
+					<br> <br>
+					<br> <br>
+					<div>
+						<button class="btn btn-success">
+							<a th:attr="ng-click=@{|cart.add(${id})|}" class="buy"><i
+								class="fa fa-cart-plus"></i> Mua ngay</a>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br> <br>
+		<br> <br>
+		<div class="category-box">
+			<h3>Sản phẩm cùng loại</h3>
+			<div class="content-cat">
+				<ul>
+					<li th:each="p:*{category.products}"><i
+						class="fa fa-angle-right"></i> <a
+						th:href="@{|/product/detail/${p.id}|}" th:text="${p.name}">[[${c.name}]]</a></li>
+
+				</ul>
+			</div>
+		</div>
+
+	</main>
+</body>
+
+</html>

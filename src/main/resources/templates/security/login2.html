@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout/index :: dynamic(~{::main})}">
+
+<body>
+	<main>
+		<form th:action="@{/security/login2}" method="post" >
+			<div class="panel" style="background-color: #EEEEEE; border-radius: 8px;">
+    <div class="panel-heading" style="background-color: #EEEEEE; border-radius: 8px;">
+        <div class="panel-title">
+        	<em class="pull-right" style="color: red;">
+        		<span class="glyphicon glyphicon-warning-sign"></span> ${message}
+        	</em>
+        	 ĐĂNG KÝ
+        </div>
+    </div>
+    <div class="panel-body">
+    	<div class="row">
+    		<div class="col-sm-4 text-center">
+    			
+    		</div>
+    		<div class="col-sm-8">
+		        <div class="form-group">
+		            <label>Tài khoản</label>
+		            <input path="id" class="form-control"/>
+		          
+		        </div>
+		        <div class="form-group">
+		            <label>Mật khẩu</label>
+		            <password path="password" showPassword="true" class="form-control"/>
+		    
+		        </div>
+		        <div class="form-group">
+		            <label>Họ và tên</label>
+		            <input path="fullName" class="form-control"/>
+		            
+		        </div>
+		        <div class="form-group">
+		            <label>Email</label>
+		            <input path="email" class="form-control"/>
+		           
+		        </div>    
+		      	
+	    		<div class="form-group">
+		        	<label>Ảnh đại diện</label>
+		            <input onchange="upload.change(this, '#photo_image')" type="file" name="photo_file" id="photo_file" class="form-control">
+s
+		        </div>		        
+    		</div>
+    	</div>
+    </div>
+    <div class="panel-footer text-center" style="background-color: #EEEEEE; border-radius: 8px;">
+        <button class="btn" style="border-style: outset; border-radius: 8px;
+         border-color: #FF9900; background-color: #FF9900; color: white;">
+        	<span class="glyphicon glyphicon-user"></span> ĐĂNG KÝ NGAY
+        </button>
+    </div>
+</div>
+		</form>
+	</main>
+</body>
+</html>

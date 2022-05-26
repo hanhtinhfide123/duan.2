@@ -1,0 +1,58 @@
+
+
+<div class="sidebar" xmlns:th="http://www.thymeleaf.org">
+	<div class="category-box">
+		<h3>Danh mục sản phẩm</h3>
+		<div class="content-cat">
+			<ul>
+				<li th:each="c:${cates}" ><i class="fa fa-angle-right"></i> 
+				<a th:href="@{|/product/list?cid=${c.id}|}">[[${c.name}]]</a></li>
+				
+			</ul>
+		</div>
+	</div>
+	<div class="widget">
+		<h3>
+			<i class="fa fa-bars"></i> Tin tức
+		</h3>
+		<div class="content-w">
+			<ul>
+				<li><a href="#"><img src="/assets/images/news.jpg" alt=""></a>
+					<h4>
+						<a href="#">Thương hiệu đồng hồ thông minh Sinophy của nước
+							nào?</a>
+					</h4>
+					<div class="clear"></div></li>
+				<li><a href="#"><img src="/assets/images/news1.jpg" alt=""></a>
+					<h4>
+						<a href="#">Tất cả thông tin bạn cần biết về iPhone 13 2021</a>
+					</h4>
+					<div class="clear"></div></li>
+				<li><a href="#"><img src="/assets/images/news2.jpg" alt=""></a>
+					<h4>
+						<a href="#">Thế Giới Di Động hé lộ giá bán dự kiến và màu của 2 mẫu</a>
+					</h4>
+					<div class="clear"></div></li>
+				<li><a href="#"><img src="/assets/images/news3.jpg" alt=""></a>
+					<h4>
+						<a href="#">Rẻ quá đã khi mua thẻ cào - thẻ game trong tháng 8</a>
+					</h4>
+					<div class="clear"></div></li>
+				<li><a href="#"><img src="/assets/images/news4.jpg" alt=""></a>
+					<h4>
+						<a href="#">OPPO K9 Pro có khả năng là chiếc Realme GT Neo được</a>
+					</h4>
+					<div class="clear"></div></li>
+			</ul>
+		</div>
+	</div>
+	<div class="widget">
+		<h3>
+			<i class="fa fa-bars"></i> Quảng cáo
+		</h3>
+		<div class="content-banner">
+			<a href="#"> <img src="/assets/images/banner.png" alt="">
+			</a>
+		</div>
+	</div>
+</div>

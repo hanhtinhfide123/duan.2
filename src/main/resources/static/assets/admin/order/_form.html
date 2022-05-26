@@ -1,0 +1,30 @@
+<div class="panel panel-primary" style="border: 3px outset #419cc3;">
+        	<div class="panel-heading">ORDER INFORMATION</div>
+        	<br>
+        	
+        	<div class="panel-body">
+        		<div class="row">
+        			<div class="form-group col-sm-4">
+        				<div>Order Number:</div>
+        				<input ng-model="form.id"  class="form-control" readonly>
+        			</div>
+        			<div class="form-group col-sm-4">
+        				<div>Purchaser:</div>
+        				<input ng-model="form.account.username"   class="form-control" readonly>
+        			</div>
+        			<div class="form-group col-sm-4">
+        				<div>Purchaser Date:</div>
+        				<input ng-model="form.createDate" class="form-control" readonly>
+        			</div>
+        		</div>
+        		<div class="row">
+        			<div class="form-group col-sm-12">
+        				<div>Shipping address:</div>
+        				<textarea ng-model="form.address" class="form-control" readonly></textarea>	
+        			</div>
+        		</div>
+        		
+        	</div>
+        	</div>	
+        	<br>
+        	<br>

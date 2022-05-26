@@ -1,0 +1,50 @@
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="dynamic(main)">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+</head>
+
+<body class="container" ng-app="admin-app">
+    <header class="row">
+        <h2 class="alert alert-succsse">ADMIN</h2>
+    </header>
+    <div class="row">
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;" style="font-variant: small-caps;">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#!product">Products</a></li>
+                    <li><a href="#!authorize">Authorizing</a></li>
+                    <li><a href="#!category">Category</a></li>
+                    <li><a href="#!order">Order</a></li>
+                    <li><a href="#!account">account</a></li>
+                    
+                    
+                    <li><a href="/security/logoff">sign out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <main>
+    	<p class="ng-view"/>
+    </main>
+    <footer> Phạm Minh Quang_PS13559</footer>
+    <script src="/assets/admin/admin-app.js"></script>
+    <script src="/assets/admin/product/product-ctrl.js"></script>
+    <script src="/assets/admin/authority/authority-ctrl.js"></script>
+    <script src="/assets/admin/category/category-ctrl.js"></script>
+    <script src="/assets/admin/order/order-ctrl.js"></script>
+    <script src="/assets/admin/account/account-ctrl.js"></script>
+</body>
+
+</html>
